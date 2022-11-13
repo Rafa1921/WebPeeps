@@ -1,0 +1,111 @@
+:root {
+    --footer-color: #0f1b28;
+    --main-color: #ffb11f;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+}
+
+
+/* ---------- navbar ----------  */
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar {
+    transition: 0.9s;
+    background-color: #52688f;
+}
+
+
+/* -------- create sticky navbar ------  */
+
+.sticky {
+    background-color: var(--footer-color) !important;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+@media(max-width:767px) {
+    .bg {
+        text-align: center;
+        background-color: var(--footer-color);
+    }
+}
+
+
+/* -------------- home section ----------------  */
+
+.hero {
+    background-image: url('img/hero.webp');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.4)
+}
+
+.hero .content h1 {
+    font-size: clamp(27px, 5vw, 90px);
+}
+
+.hero .content p {
+    font-size: 1.3rem;
+    max-width: 768px;
+}
+
+.button {
+    padding: 13px 49px;
+    background: var(--main-color);
+    transition: all 0.3s ease;
+    border-radius: 3px;
+    position: relative;
+    
+}
+
+button {
+    border: none
+}
+
+.button::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    transform: scalex(0);
+    transform-origin: 100% 50%;
+    border-radius: 3px;
+    background-color: #7391C8;
+    transition: transform 0.3s ease-in-out;
+}
+
+.button .txt {
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-size: medium;
+}
+
+
+@media(max-width:768px) {
+    html {
+        font-size: 80.5% !important;
+    }
+}
+
+
